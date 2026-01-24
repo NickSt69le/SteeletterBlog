@@ -1,92 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Blog</title>
-
-  <!-- Beautiful serif + clean sans pairing -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Source Serif Pro", serif;
-      background: #fafafa;
-      color: #222;
-      line-height: 1.7;
-    }
-
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-    }
-
-    header h1 {
-      font-family: "Inter", sans-serif;
-      font-weight: 600;
-      margin-bottom: 0.3rem;
-    }
-
-    header p {
-      font-family: "Inter", sans-serif;
-      font-weight: 300;
-      color: #555;
-    }
-
-    main {
-      max-width: 720px;
-      margin: auto;
-      padding: 2rem 1rem 4rem;
-    }
-
-    article h2 {
-      margin-top: 3rem;
-      font-weight: 600;
-    }
-
-    article p {
-      margin: 1.2rem 0;
-      font-size: 1.1rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      font-family: "Inter", sans-serif;
-      color: #777;
-      font-size: 0.9rem;
-    }
-  </style>
-</head>
-
 <body>
-  <header>
-    <h1>My Blog</h1>
-    <p>Thoughts, notes, and experiments</p>
+
+  <!-- STEELETTER MASTHEAD -->
+  <header class="masthead">
+    <h1 class="masthead-title">STEELETTER</h1>
+    <p class="masthead-sub">Independent Writing & Modern Typography</p>
   </header>
 
-  <main>
-    <article>
-      <h2>My First Post</h2>
-      <p><em>Published: January 24, 2026</em></p>
+  <!-- THUMBNAIL GRID -->
+  <main class="post-grid">
 
-      <p>
-        Welcome to my blog! This is a minimal, typography‑focused layout inspired by
-        clean reading experiences. You can add more posts by creating new HTML files
-        or linking Markdown files converted to HTML.
-      </p>
-
-      <p>
-        This layout keeps everything simple: a centered column, generous spacing,
-        and a focus on readability. Perfect for writing without distractions.
-      </p>
-    </article>
+    <a class="post-card" href="posts/issue9.html">
+      <img src="images/post1-thumb.jpg" alt="Post 1 thumbnail">
+      <div class="post-card-content">
+        <h2>Understanding Personality Traits</h2>
+        <p>A deep dive into trait theory and how we describe human behavior.</p>
+      </div>
+    </a>
   </main>
 
-  <footer>
-    © 2026 — Built with GitHub Pages
-  </footer>
 </body>
-</html>
+<style>
+    /* --- STEELETTER MASTHEAD --- */
+.masthead {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-bottom: 2px solid #000;
+  margin-bottom: 3rem;
+}
+
+.masthead-title {
+  font-family: "Source Serif Pro", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.masthead-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 0.6rem;
+  color: #555;
+}
+
+/* --- GRID LAYOUT --- */
+.post-grid {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+/* --- POST CARD --- */
+.post-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.post-card-content {
+  padding: 1.2rem 1.4rem 1.6rem;
+}
+
+.post-card-content h2 {
+  font-family: "Source Serif Pro", serif;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  line-height: 1.3;
+}
+
+.post-card-content p {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+</style>
